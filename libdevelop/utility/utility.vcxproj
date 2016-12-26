@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{32A2380C-DAE2-4355-8951-7B2225CD5C04}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>utility</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)temp\$(ProjectName)</IntDir>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>COMMON_EXPORT;WIN32;_DEBUG;_WINDOWS;_USRDLL;UTILITY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST $(SolutionDir)lib\$(Configuration) md $(SolutionDir)lib\$(Configuration)
+IF NOT EXIST $(SolutionDir)bin\$(Configuration) md $(SolutionDir)bin\$(Configuration)
+IF NOT EXIST $(SolutionDir)include\$(TargetName) md $(SolutionDir)include\$(TargetName)
+copy $(OutDir)$(TargetName).lib $(SolutionDir)lib\$(Configuration)
+copy $(OutDir)$(TargetName).dll $(SolutionDir)bin\$(Configuration)
+copy $(ProjectDir)src\*.h  $(SolutionDir)include\$(TargetName)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UTILITY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Applog.h" />
+    <ClInclude Include="src\Condition.h" />
+    <ClInclude Include="src\DateTime.h" />
+    <ClInclude Include="src\Directory.h" />
+    <ClInclude Include="src\Global.h" />
+    <ClInclude Include="src\include_common.h" />
+    <ClInclude Include="src\Mutex.h" />
+    <ClInclude Include="src\nocopyable.h" />
+    <ClInclude Include="src\Properties.h" />
+    <ClInclude Include="src\QAddress.h" />
+    <ClInclude Include="src\QClientSocket.h" />
+    <ClInclude Include="src\QServerSocket.h" />
+    <ClInclude Include="src\QSharePtr.h" />
+    <ClInclude Include="src\QSocket.h" />
+    <ClInclude Include="src\QThread.h" />
+    <ClInclude Include="src\Semaphore.h" />
+    <ClInclude Include="src\session.h" />
+    <ClInclude Include="src\session_id.h" />
+    <ClInclude Include="src\singleton.h" />
+    <ClInclude Include="src\SpendTime.h" />
+    <ClInclude Include="src\SpinLock.h" />
+    <ClInclude Include="src\SSemaphore.h" />
+    <ClInclude Include="src\tcpserver.h" />
+    <ClInclude Include="src\Thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Applog.cpp" />
+    <ClCompile Include="src\Condition.cpp" />
+    <ClCompile Include="src\Directory.cpp" />
+    <ClCompile Include="src\Global.cpp" />
+    <ClCompile Include="src\Mutex.cpp" />
+    <ClCompile Include="src\Properties.cpp" />
+    <ClCompile Include="src\QAddress.cpp" />
+    <ClCompile Include="src\QClientSocket.cpp" />
+    <ClCompile Include="src\QServerSocket.cpp" />
+    <ClCompile Include="src\QSocket.cpp" />
+    <ClCompile Include="src\QThread.cpp" />
+    <ClCompile Include="src\Semaphore.cpp" />
+    <ClCompile Include="src\session.cpp" />
+    <ClCompile Include="src\session_id.cpp" />
+    <ClCompile Include="src\SpinLock.cpp" />
+    <ClCompile Include="src\SSemaphore.cpp" />
+    <ClCompile Include="src\tcpserver.cpp" />
+    <ClCompile Include="src\Thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\build\build_module.mk" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

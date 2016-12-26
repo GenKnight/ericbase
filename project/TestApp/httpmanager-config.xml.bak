@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<http_manager>
+    <!--server-name note="服务名称">a50_zd</server-name-->
+    <!--module-name note="模块名称">a50_zd</module-name-->
+    <!--moa-register note="是否注册监控服务器">true</moa-register-->
+    <server>
+        <ip note="服务HTTP地址">0.0.0.0</ip>
+        <port note="HTTP端口">2032</port>
+        <timeout note="HTTP超时时间">60</timeout>
+        <type note="消息类型 1发送者 2接收者 3发送接收者">1</type>
+        <name note="消息发送者名字(唯一)">http_manager_stock_1</name>
+    </server>
+    
+    <system>
+        <holiday_check note="节假日校验">1</holiday_check>
+        <trade_time_check note="交易时间校验">1</trade_time_check>
+    </system>
+    
+    <db>
+        <type note="数据库类型">mysql</type>
+        <host note="MYSQL服务地址">192.168.149.130</host>
+        <port note="MYSQL服务端口">3306</port>
+        <user note="MYSQL服务用户名">eric</user>
+        <pwd note="MYSQL服务密码">963852</pwd>
+        <dbname note="MYSQL服务名称">mydb</dbname>
+        <charset note="MYSQL字符集">utf8</charset>
+    </db>
+    
+    <configdb>
+        <type note="数据库类型">mysql</type>
+        <host note="MYSQL服务地址">192.168.4.65</host>
+        <port note="MYSQL服务端口">3306</port>
+        <user note="MYSQL服务用户名">wcp</user>
+        <pwd note="MYSQL服务密码">2cROosWVKZkG5GppCuBSNDZdHu1Ygfj5te/JaJA+dQM=</pwd>
+        <dbname note="MYSQL服务名称">idstocktm</dbname>
+        <charset note="MYSQL字符集">utf8</charset>
+    </configdb>
+    
+    <servernames>
+        <name note="服务名列表">'stock_trade_server1','server2'</name>
+    </servernames>
+    
+    <trade_tbl_config>
+        <statutory_holidays note="国家法定节假日配置表">statutory_holidays</statutory_holidays>
+        <trade_times note="交易时间段配置表">trade_times</trade_times>
+        <front_trade note="前端委托表">front_trade</front_trade>
+        <account note="执行人信息表">account_config</account>
+        <securities note="证券代码表">securities</securities>
+        <contract_order note="交易订单表">contract_order</contract_order>
+        <contract_order_history note="交易历史订单表">contract_order_history</contract_order_history>
+        <contractor_deal note="交易成交表">contract_deal</contractor_deal>
+        <contractor_dealhistory note="交易历史成交表">contract_deal_history</contractor_dealhistory>
+        <contractor_stockhold note="交易持仓表">contract_stockhold</contractor_stockhold>
+        <contractor_stockholdhistory note="交易历史持仓表">contract_stockhold_history</contractor_stockholdhistory>
+        <disallow_stock note="禁买股表">disallow_stocks_buy</disallow_stock>
+        <bonus_stock note="分红送股表">stock_bonus_info</bonus_stock>
+        <product_params note="交易参数表">product_params</product_params>
+        <union_contract note="合约表">union_contract</union_contract>
+        <contract_stocks note="合约相关股票">contract_stocks</contract_stocks>
+        <allow_stock note="买股表">allow_stocks_buy</allow_stock>
+        <account_trade_fee_rule note="交易费用规则表">account_trade_fee_rule</account_trade_fee_rule>
+    </trade_tbl_config>
+    
+    <contract_resever_period>
+        <start_time note="resever_start_time">15:30:00</start_time>
+        <end_time note="resever_end_time">18:00:00</end_time>
+    </contract_resever_period>
+    
+    <redo_bonus_arrive_period>
+        <start_time note="bonus_start_time">16:00:00</start_time>
+        <end_time note="bonus_end_time">22:00:00</end_time>
+    </redo_bonus_arrive_period>
+</http_manager>

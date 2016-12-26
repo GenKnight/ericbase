@@ -1,0 +1,17 @@
+package	machine;
+
+message MachineHead
+{
+	required string ip=1;
+	optional bytes mac=2;
+}
+
+message ProcessHead
+{
+	required string processName=1;
+	optional int64	processID=2;
+	optional string processlogPath = 3;		//进程log文件目录
+}
+
+
+

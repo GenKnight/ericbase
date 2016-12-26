@@ -1,0 +1,8 @@
+2016/10/21 10:30:46.784/(DEBUG_L):	Current UDP rev buffer size: 8192	(qsocket.cpp:117)
+2016/10/21 10:30:46.786/(DEBUG_L):	Setting UDP rev buffer size: 10240000	(qsocket.cpp:120)
+2016/10/21 10:30:46.788/(DEBUG_L):	Now new UDP rev buffer size: 10240000	(qsocket.cpp:181)
+2016/10/21 10:30:46.790/(DEBUG_L):	Current UDP rev buffer size: 8192	(qsocket.cpp:117)
+2016/10/21 10:30:46.793/(DEBUG_L):	Setting UDP rev buffer size: 102400	(qsocket.cpp:120)
+2016/10/21 10:30:46.794/(DEBUG_L):	Now new UDP rev buffer size: 102400	(qsocket.cpp:181)
+2016/10/21 10:30:49.952/(ERROR):	QClientSocket::receiveData : recv : The virtual circuit was reset by the remote side executing a hard or abortive close.10054	(qsocket.cpp:376)
+2016/10/21 10:30:49.954/(WARNING):	not found thread id : 3758448	(qthread.cpp:122)

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "s_dbaccess", "s_dbaccess.vcxproj", "{865FA618-6C51-4117-AFD5-BF731110698F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{865FA618-6C51-4117-AFD5-BF731110698F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{865FA618-6C51-4117-AFD5-BF731110698F}.Debug|Win32.Build.0 = Debug|Win32
+		{865FA618-6C51-4117-AFD5-BF731110698F}.Release|Win32.ActiveCfg = Release|Win32
+		{865FA618-6C51-4117-AFD5-BF731110698F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

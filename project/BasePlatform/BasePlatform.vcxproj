@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\proto\basehead.pb.cc" />
+    <ClCompile Include="..\proto\ReqSubProcessListInfo.pb.cc" />
+    <ClCompile Include="..\proto\ReqSubSystemInfo.pb.cc" />
+    <ClCompile Include="..\proto\RtnProcessLogInfo.pb.cc" />
+    <ClCompile Include="src\projectframe\ClientSession.cpp" />
+    <ClCompile Include="src\projectframe\EngineEnvironment.cpp" />
+    <ClCompile Include="src\projectframe\EngineTask.cpp" />
+    <ClCompile Include="src\projectframe\main.cpp" />
+    <ClCompile Include="src\projectframe\ProjectServer.cpp" />
+    <ClCompile Include="src\projectframe\publicfun.cpp" />
+    <ClCompile Include="src\projectframe\RequestCMDParser.cpp" />
+    <ClCompile Include="src\projectframe\RequestCommand.cpp" />
+    <ClCompile Include="src\projectframe\TaskFactory.cpp" />
+    <ClCompile Include="src\Serverframe\AmqEngine.cpp" />
+    <ClCompile Include="src\Serverframe\AsioEngine.cpp" />
+    <ClCompile Include="src\Serverframe\DefaultHandler.cpp" />
+    <ClCompile Include="src\Serverframe\LibeventEngine.cpp" />
+    <ClCompile Include="src\Serverframe\OrderInsertHandler.cpp" />
+    <ClCompile Include="src\Serverframe\QryOrderHandler.cpp" />
+    <ClCompile Include="src\Serverframe\Server.cpp" />
+    <ClCompile Include="src\task\TaskLogin.cpp" />
+    <ClCompile Include="src\task\TaskRegister.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\proto\basehead.pb.h" />
+    <ClInclude Include="..\proto\parse.h" />
+    <ClInclude Include="..\proto\ReqSubProcessListInfo.pb.h" />
+    <ClInclude Include="..\proto\ReqSubSystemInfo.pb.h" />
+    <ClInclude Include="..\proto\RtnProcessLogInfo.pb.h" />
+    <ClInclude Include="src\projectframe\ClientSession.h" />
+    <ClInclude Include="src\projectframe\EngineEnvironment.h" />
+    <ClInclude Include="src\projectframe\EngineTask.h" />
+    <ClInclude Include="src\projectframe\ProjectServer.h" />
+    <ClInclude Include="src\projectframe\publicfun.h" />
+    <ClInclude Include="src\projectframe\RequestCMDParser.h" />
+    <ClInclude Include="src\projectframe\RequestCommand.h" />
+    <ClInclude Include="src\projectframe\TaskData.h" />
+    <ClInclude Include="src\projectframe\TaskFactory.h" />
+    <ClInclude Include="src\projectframe\TcpMsgHead.h" />
+    <ClInclude Include="src\Serverframe\AmqEngine.h" />
+    <ClInclude Include="src\Serverframe\AsioEngine.h" />
+    <ClInclude Include="src\Serverframe\AsynCounter.h" />
+    <ClInclude Include="src\Serverframe\DefaultHandler.h" />
+    <ClInclude Include="src\Serverframe\DispatchServer.h" />
+    <ClInclude Include="src\Serverframe\LibeventEngine.h" />
+    <ClInclude Include="src\Serverframe\MessageDispatcher.h" />
+    <ClInclude Include="src\Serverframe\MessageQueue.h" />
+    <ClInclude Include="src\Serverframe\MessageServer.h" />
+    <ClInclude Include="src\Serverframe\OrderInsertHandler.h" />
+    <ClInclude Include="src\Serverframe\QryOrderHandler.h" />
+    <ClInclude Include="src\Serverframe\RequestAdapter.h" />
+    <ClInclude Include="src\Serverframe\Server.h" />
+    <ClInclude Include="src\Serverframe\State.h" />
+    <ClInclude Include="src\Serverframe\TcpServerHub.h" />
+    <ClInclude Include="src\Serverframe\Thread.h" />
+    <ClInclude Include="src\Serverframe\ThreadManager.h" />
+    <ClInclude Include="src\task\TaskInterfaceDef.h" />
+    <ClInclude Include="src\task\TaskLogin.h" />
+    <ClInclude Include="src\task\TaskRegister.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\proto\basehead.proto" />
+    <None Include="..\proto\proto.bat" />
+    <None Include="..\proto\ReqSubProcessListInfo.proto" />
+    <None Include="..\proto\ReqSubSystemInfo.proto" />
+    <None Include="..\proto\RtnProcessLogInfo.proto" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31519246-B270-4510-9FCF-BDA83C01C2BA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BasePlatform</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)temp\$(ProjectName)</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\mysql\include\;$(SolutionDir)contrib\libevent\include\win;$(SolutionDir)include\AsioTcpServer;$(SolutionDir)include;$(SolutionDir)contrib;$(SolutionDir)include\s_dbaccess;$(SolutionDir)include\utility</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration);$(SolutionDir)contrib\boost\lib_vc100;$(SolutionDir)contrib\mysql\lib;$(SolutionDir)contrib\google\protobuf\lib_vc100\debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;s_dbaccess.lib;fndcms.lib;LibeventSocket.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;ws2_32.lib;wsock32.lib;utility.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST $(SolutionDir)bin\$(Configuration) md $(SolutionDir)bin\$(Configuration)
+copy $(ProjectDir)*.conf  $(SolutionDir)bin\$(Configuration)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

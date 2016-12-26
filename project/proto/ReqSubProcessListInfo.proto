@@ -1,0 +1,36 @@
+package	machine;
+import "basehead.proto";
+
+//每次订阅推送，都以最新的请求列表为准,新的订阅列表请求会覆盖上次的订阅列表请求
+
+message ReqSubProcessListInfo
+{
+	required MachineHead	machine=1;
+	repeated ProcessHead	process=2;			//array
+	required string			userID=3;			//登录账户
+
+}
+
+message RspSubProcessListInfo
+{
+	required MachineHead	machine=1;
+	repeated ProcessHead	process=2;	
+	required string			userID=3;			//登录账户
+}
+
+message ProcessValue
+{
+	optional double dProcessCpu=1;		//进程占用cpu
+	optional double dProcessUseMem=2;	//进程消耗内存,
+	optional int64	nPid=3;				//进程id,
+}
+
+message ProcessInfo
+{
+	required MachineHead machine=1;
+	required ProcessHead process=2;
+	required int32	process_is_run=3;	//进程是否在运行
+	optional double dProcesscounts=4;	//进程数量
+	optional string	tickTime=5;			//发送时服务器的TickTime
+	repeated ProcessValue value=6;		//有可能存在多个进程
+}

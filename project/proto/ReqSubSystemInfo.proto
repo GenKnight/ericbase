@@ -1,0 +1,27 @@
+package	machine;
+import "basehead.proto";
+
+message ReqSubSystemInfo
+{
+	required MachineHead	machine=1;
+	required int32			bIsSub=2;			//1 订阅 ，0取消订阅
+	required string			userID=3;			//登录账户
+}
+
+message RspSubSystemInfo
+{
+	required MachineHead	machine =1;
+	required int32			bIsSub=2;			//1 订阅 ，0取消订阅
+	required string			userID=3;			//登录账户
+
+}
+
+message MachineSystemInfo
+{
+	required MachineHead machine =1;
+
+	optional double		dCpuPercent=2;		//系统cpu
+	optional double		dUseMemory=3;		//系统已用内存
+	optional double		dTotalMemory=4;		//系统总共内存
+	optional string		tickTime=5;		//发送时服务器的TickTime
+}

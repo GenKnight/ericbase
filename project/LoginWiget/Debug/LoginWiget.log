@@ -1,0 +1,15 @@
+﻿生成启动时间为 2016/12/1 10:22:54。
+     1>项目“I:\Ericbase\project\LoginWiget\LoginWiget.vcxproj”在节点 4 上(Build 个目标)。
+     1>CustomBuild:
+         Moc'ing loginwiget.h...
+         系统找不到指定的路径。
+         Uic'ing loginwiget.ui...
+         系统找不到指定的路径。
+         Rcc'ing loginwiget.qrc...
+         系统找不到指定的路径。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(151,5): error MSB6006: “cmd.exe”已退出，代码为 3。
+     1>已完成生成项目“I:\Ericbase\project\LoginWiget\LoginWiget.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.01

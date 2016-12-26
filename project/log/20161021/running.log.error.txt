@@ -1,0 +1,1 @@
+2016/10/21 10:30:49.952/(ERROR):	QClientSocket::receiveData : recv : The virtual circuit was reset by the remote side executing a hard or abortive close.10054	(qsocket.cpp:376)

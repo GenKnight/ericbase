@@ -1,0 +1,14 @@
+package	machine;
+import "basehead.proto";
+
+
+message ProcessLogInfo
+{
+	required MachineHead machine =1;
+	required ProcessHead process=2;
+	optional string		userid=3;
+	repeated bytes		logInfo=4;			
+	optional int32		loglevel=5;		
+	optional string		tickTime=6;		//发送时服务器的TickTime
+
+}
